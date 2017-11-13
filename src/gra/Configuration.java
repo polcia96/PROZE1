@@ -1,5 +1,5 @@
 package gra;
 
 public class Configuration {
-//asd
+//pola nie jedz 
 }
