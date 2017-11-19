@@ -9,7 +9,7 @@ public class Brick extends Element {
 	String cos;
 	public Brick(){
 		super();
-		//brickColor=Color.BLACK;
+		brickColor=Color.BLACK;
 		cos="sprawdzenie";
 	}
 	

@@ -42,8 +42,6 @@ public class MyMenu extends JMenu implements ActionListener {
 			System.out.println("dzia³a_start");
 
 		else if(source == level) {
-			LevelWindow l1=new LevelWindow();
-			l1.levelGroup.setVisible(true);
 		}
 		
 		else if(source == ranking)

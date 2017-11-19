@@ -36,7 +36,7 @@ public class MainFrame extends JFrame{
 		
 		
 		board=new Board();
-		brick=new Brick();
+		//brick=new Brick();
 		
 
 		//board.drawRect(g);

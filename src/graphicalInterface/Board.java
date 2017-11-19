@@ -9,14 +9,14 @@ import board_elements.Brick;
 
 public class Board extends JPanel{
 	 /**
-	 * 
+	 * fghd
 	 */
 
 	Brick bricks;
 	
 	public Board(){
 		super();
-		//bricks=new Brick();
+		bricks=new Brick();
 		
 	}
 	
