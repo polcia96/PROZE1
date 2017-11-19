@@ -1,12 +1,17 @@
 
 package board_elements;
 
+import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Rectangle;
 
 public abstract class Element {
 	public int x;
 	public int y;
 	public  Dimension dimension;
+	public Color elColor;
+	
 	
 	public static final int BRICK_WIDTH=70;
 	public static final int BRICK_HIGHT=30;
@@ -24,6 +29,7 @@ public abstract class Element {
 		x=X_LEFT+xIndex;
 		y=Y_TOP+yIndex;
 		dimension=new Dimension(BRICK_WIDTH,BRICK_HIGHT); 
+		elColor=new Color(0, 0, 0);
 		
 	}
 	
@@ -31,6 +37,7 @@ public abstract class Element {
 		x=X_LEFT+xIndex;
 		y=Y_TOP+yIndex;
 		dimension=new Dimension(width,hight); 
+		elColor=new Color(0, 0, 0);
 		
 	}
 
@@ -43,7 +50,18 @@ public abstract class Element {
 	public int getWidth() {
 		return (int)dimension.getWidth();
 	}
-	public int getHight() {
+	public int getHeight() {
 		return (int)dimension.getHeight();
 	}
+
+	public Rectangle convertToRect () {
+		Rectangle rect=new Rectangle(x,y,(int)dimension.getWidth(),(int)dimension.getHeight());
+		return rect;
+	}
+	
+
+
+
+
+
 }

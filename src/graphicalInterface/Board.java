@@ -1,5 +1,7 @@
 package graphicalInterface;
 
+import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.List;
 import java.awt.Rectangle;
@@ -7,9 +9,7 @@ import java.util.ArrayList;
 
 import javax.swing.JPanel;
 
-import board_elements.Brick;
-import board_elements.Element;
-
+import board_elements.*;
 
 
 public class Board extends JPanel{
@@ -18,23 +18,34 @@ public class Board extends JPanel{
 	 */
 
 	ArrayList<Brick> bricks;
+	Pallet pallet;
+	Ball ball;
 	
 	public static final int NUMBER_BRICKS=39;
 	public static final int BOARD_WIDTH=800;
 	public static final int BOARD_HIGHT=800;
 	public static final int X_SPACE=20;
 	public static final int Y_SPACE=20;
+	
+	
 	public Board(){
 		super();
 		super.setName("cos dziala");
 		
+		
+		
 		int xIndex=0;
 		int yIndex=0;
 		
-			 bricks= new ArrayList <Brick>();
+		bricks= new ArrayList <Brick>();
+		pallet  = new Pallet();
+		ball=new Ball();
 			 
-			 makeBricks(xIndex,yIndex);
-
+		 makeBricks(xIndex,yIndex);
+		 
+		 setSize(BOARD_WIDTH, BOARD_HIGHT);
+		 setBackground(Color.BLACK);
+		 setVisible(true);
 		
 	}
 	
@@ -57,11 +68,15 @@ public class Board extends JPanel{
 	}
 	
 	public void paint(Graphics g) {
+
 		super.paint(g);
 		
 		g.drawRect(0, 0, getWidth(), getHeight());
 		for(int i=0;i<NUMBER_BRICKS;++i)
 			bricks.get(i).drawRect(g);
+		
+		pallet.drawPallet(g);
+		ball.drawBall(g);
 
 	
 	}
