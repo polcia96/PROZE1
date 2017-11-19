@@ -6,7 +6,7 @@ public class Element {
 	public int x;
 	public int y;
 	public  Dimension dimension;
-	///gfghhjhg
+	///gfghhjhgjjj
 	public Element(){
 		x=0;
 		y=0;
