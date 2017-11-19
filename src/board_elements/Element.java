@@ -7,7 +7,7 @@ public class Element {
 	public int x;
 	public int y;
 	public  Dimension dimension;
-	///gfghhjhgjjjgdd
+
 	public Element(){
 		x=0;
 		y=0;
@@ -15,7 +15,7 @@ public class Element {
 		dimension.height=20;
 		
 	}
-	//aaa
+/aaaaaaaa
 	public int getx() {
 		return x;
 	}
