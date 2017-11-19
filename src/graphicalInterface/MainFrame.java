@@ -19,8 +19,8 @@ public class MainFrame extends JFrame{
 	LevelWindow mLevels;
 	Board board;
 	Graphics g;
-	Brick brick;
-	
+	//Brick brick;
+	//JFrame frame;
 	
 	public MainFrame() {
 		super("ARKANOID");
@@ -29,6 +29,8 @@ public class MainFrame extends JFrame{
 		menu=new MyMenu();
 		menuBar.add(menu.menu);
 		
+		//frame=new Frame();
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(1000,1000);
 		setLocation(50,0);
@@ -36,8 +38,7 @@ public class MainFrame extends JFrame{
 		
 		
 		board=new Board();
-		//brick=new Brick();
-		
+		add(board);
 
 		//board.drawRect(g);
 		setVisible(true);

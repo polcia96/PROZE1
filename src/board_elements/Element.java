@@ -3,7 +3,7 @@ package board_elements;
 
 import java.awt.Dimension;
 
-public class Element {
+public abstract class Element {
 	public int x;
 	public int y;
 	public  Dimension dimension;
@@ -11,11 +11,20 @@ public class Element {
 	public Element(){
 		x=0;
 		y=0;
-		dimension.width=40;
-		dimension.height=20;
+		dimension=new Dimension(40,20); 
+		//dimension.width=40;
+		//dimension.height=20;
 		
 	}
-/aaaaaaaa
+	public Element(int xIndex,int yIndex){
+		x=xIndex;
+		y=yIndex;
+		dimension=new Dimension(40,20); 
+		//dimension.width=40;
+		//dimension.height=20;
+		
+	}
+
 	public int getx() {
 		return x;
 	}
