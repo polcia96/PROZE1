@@ -7,21 +7,30 @@ public abstract class Element {
 	public int x;
 	public int y;
 	public  Dimension dimension;
-
+	
+	public static final int BRICK_WIDTH=70;
+	public static final int BRICK_HIGHT=30;
+	public static final int X_LEFT=75;
+	public static final int Y_TOP=100;
 	public Element(){
-		x=0;
-		y=0;
-		dimension=new Dimension(40,20); 
+		x=X_LEFT;
+		y=Y_TOP;
+		dimension=new Dimension(BRICK_WIDTH,BRICK_HIGHT); 
 		//dimension.width=40;
 		//dimension.height=20;
 		
 	}
 	public Element(int xIndex,int yIndex){
-		x=xIndex;
-		y=yIndex;
-		dimension=new Dimension(40,20); 
-		//dimension.width=40;
-		//dimension.height=20;
+		x=X_LEFT+xIndex;
+		y=Y_TOP+yIndex;
+		dimension=new Dimension(BRICK_WIDTH,BRICK_HIGHT); 
+		
+	}
+	
+	public Element(int xIndex,int yIndex, int width,int hight){
+		x=X_LEFT+xIndex;
+		y=Y_TOP+yIndex;
+		dimension=new Dimension(width,hight); 
 		
 	}
 

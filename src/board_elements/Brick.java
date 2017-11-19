@@ -20,7 +20,7 @@ public class Brick extends Element {
 		super(xIndex, yIndex);
 		brickColor=new Color(0, 0, 0);
 		brickColor=Color.BLACK;
-		
+		//aa
 	}
 	
 	
