@@ -5,7 +5,7 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 
 public class Brick extends Element {
-	//Color brickColor;
+	Color brickColor;
 	String cos;
 	public Brick(){
 		super();

@@ -9,7 +9,7 @@ import board_elements.Brick;
 
 public class Board extends JPanel{
 	 /**
-	 * fghd
+	 * fghddd
 	 */
 
 	Brick bricks;
