@@ -1,3 +1,4 @@
+
 package board_elements;
 
 import java.awt.Dimension;
@@ -6,7 +7,7 @@ public class Element {
 	public int x;
 	public int y;
 	public  Dimension dimension;
-	///gfghhjhgjjj
+	///gfghhjhgjjjgdd
 	public Element(){
 		x=0;
 		y=0;
