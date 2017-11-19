@@ -11,6 +11,7 @@ public class Brick extends Element {
 		super();
 		brickColor=Color.BLACK;
 		cos="sprawdzenie";
+		//uu
 	}
 	
 	public Rectangle convertToRect () {
