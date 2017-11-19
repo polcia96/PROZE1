@@ -14,7 +14,7 @@ public class Element {
 		dimension.height=20;
 		
 	}
-	
+	//aaa
 	public int getx() {
 		return x;
 	}
