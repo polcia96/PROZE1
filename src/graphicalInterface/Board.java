@@ -23,7 +23,7 @@ public class Board extends JPanel{
 	
 	public static final int NUMBER_BRICKS=39;
 	public static final int BOARD_WIDTH=800;
-	public static final int BOARD_HIGHT=800;
+	public static final int BOARD_HEIGHT=700;
 	public static final int X_SPACE=20;
 	public static final int Y_SPACE=20;
 	
@@ -43,7 +43,7 @@ public class Board extends JPanel{
 			 
 		 makeBricks(xIndex,yIndex);
 		 
-		 setSize(BOARD_WIDTH, BOARD_HIGHT);
+		 setSize(BOARD_WIDTH, BOARD_HEIGHT);
 		 setBackground(Color.BLACK);
 		 setVisible(true);
 		
@@ -57,7 +57,7 @@ public class Board extends JPanel{
 				bricks.add(new Brick(xIndex,yIndex));
 			 	xIndex=xIndex+Element.BRICK_WIDTH+X_SPACE;;
 			}
-			 else if(yIndex<BOARD_HIGHT) {
+			 else if(yIndex<BOARD_HEIGHT) {
 				 xIndex=0;
 				 yIndex=yIndex+Element.BRICK_HIGHT+Y_SPACE;
 				 bricks.add(new Brick(xIndex,yIndex));
