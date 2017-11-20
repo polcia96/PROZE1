@@ -10,23 +10,16 @@ import java.util.ArrayList;
 import javax.swing.JPanel;
 
 import board_elements.*;
+import constants.Stale;
 
 
 public class Board extends JPanel{
-	 /**
-	 * fghddd
-	 */
+
 
 	ArrayList<Brick> bricks;
 	Pallet pallet;
 	Ball ball;
-	
-	public static final int NUMBER_BRICKS=39;
-	public static final int BOARD_WIDTH=800;
-	public static final int BOARD_HEIGHT=700;
-	public static final int X_SPACE=20;
-	public static final int Y_SPACE=20;
-	
+
 	
 	public Board(){
 		super();
@@ -43,7 +36,7 @@ public class Board extends JPanel{
 			 
 		 makeBricks(xIndex,yIndex);
 		 
-		 setSize(BOARD_WIDTH, BOARD_HEIGHT);
+		 setSize(Stale.BOARD_WIDTH, Stale.BOARD_HEIGHT);
 		 setBackground(Color.BLACK);
 		 setVisible(true);
 		
@@ -51,15 +44,15 @@ public class Board extends JPanel{
 	
 	public void makeBricks (int xIndex,int yIndex) {
 		
-		for(int i=0; i<NUMBER_BRICKS;++i) {
+		for(int i=0; i<Stale.NUMBER_BRICKS;++i) {
 			
-			if(xIndex<BOARD_WIDTH) {
+			if(xIndex<Stale.BOARD_WIDTH) {
 				bricks.add(new Brick(xIndex,yIndex));
-			 	xIndex=xIndex+Element.BRICK_WIDTH+X_SPACE;;
+			 	xIndex=xIndex+Stale.BRICK_WIDTH+Stale.X_SPACE;;
 			}
-			 else if(yIndex<BOARD_HEIGHT) {
+			 else if(yIndex<Stale.BOARD_HEIGHT) {
 				 xIndex=0;
-				 yIndex=yIndex+Element.BRICK_HIGHT+Y_SPACE;
+				 yIndex=yIndex+Stale.BRICK_HIGHT+Stale.Y_SPACE;
 				 bricks.add(new Brick(xIndex,yIndex));
 			 }
 			 else
@@ -72,7 +65,7 @@ public class Board extends JPanel{
 		super.paint(g);
 		
 		g.drawRect(0, 0, getWidth(), getHeight());
-		for(int i=0;i<NUMBER_BRICKS;++i)
+		for(int i=0;i<Stale.NUMBER_BRICKS;++i)
 			bricks.get(i).drawRect(g);
 		
 		pallet.drawPallet(g);

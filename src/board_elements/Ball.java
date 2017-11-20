@@ -1,18 +1,15 @@
 package board_elements;
 
 import java.awt.Color;
+
 import java.awt.Graphics;
+import constants.*;
 
 public class Ball extends Element{
 
-	public static final int BALL_R=30;
-	public static final int BALL_X=Pallet.PALLET_X+(Pallet.PALLET_WIDTH/2);
-	public static final int BALL_Y=Pallet.PALLET_Y-BALL_R;
-	
-	
 	public Ball()
 	{
-		super(BALL_X,BALL_Y,BALL_R,BALL_R);
+		super(Stale.BALL_X,Stale.BALL_Y,Stale.BALL_R,Stale.BALL_R);
 		elColor=Color.WHITE;
 	
 	}
