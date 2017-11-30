@@ -13,7 +13,7 @@ import constants.*
 	
 	InfoPanel(int frameWidht){
 		
-		setSize(frameWidht, Stale.INFO_PANEL_HEIGHT);
+		setSize(frameWidht, Constants.INFO_PANEL_HEIGHT);
 		setBackground(Color.BLACK);
 		setVisible(true);
 	}
@@ -26,8 +26,8 @@ import constants.*
 		java.awt.Font font = new java.awt.Font ("Arial", 1, 17);
 		g.setFont(font);
 		g.setColor(Color.WHITE);
-		g.drawString("LIVE:"+Stale.LIVE_NUMBERS,Stale.X_LIVE, Stale.Y_INFO);
-		g.drawString("TIME:"+Stale.TIME_NUMBER+"s", Stale.X_TIME,Stale.Y_INFO);
+		g.drawString("LIVE:"+Constants.LIVE_NUMBERS,Constants.X_LIVE, Constants.Y_INFO);
+		g.drawString("TIME:"+Constants.TIME_NUMBER+"s", Constants.X_TIME,Constants.Y_INFO);
 
 	}
 	

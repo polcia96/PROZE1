@@ -1,14 +1,24 @@
 package graphicalInterface;
 
 import java.awt.EventQueue;
-//PRZEKOPIOWANE,CHYBA OBS£UGA WIELOW¥TKOWA ALE JESZCZE SIÊ DOWIEM
+
+
+
+import constants.Constants;
+
+
 class Test {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
+	
 		EventQueue.invokeLater(new Runnable() {
 			@Override
 			public void run() {
+				Constants.ConstantsFromFile();
 				new MainFrame();
 			}
+
+		
 		});
 	}
 }
+

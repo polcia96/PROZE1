@@ -7,11 +7,13 @@ import constants.*;
 
 public class Ball extends Element{
 
+	public static int BALL_X=Constants.PALLET_X+(Constants.PALLET_WIDTH/2); 
+	public static int BALL_Y=Constants.PALLET_Y-Constants.BALL_R; 
 	public Ball()
 	{
-		super(Stale.BALL_X,Stale.BALL_Y,Stale.BALL_R,Stale.BALL_R);
+		super(BALL_X,BALL_Y,Constants.BALL_R,Constants.BALL_R);
 		elColor=Color.WHITE;
-	
+
 	}
 	
 	public void drawBall(Graphics g) {

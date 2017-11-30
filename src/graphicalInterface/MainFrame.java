@@ -32,7 +32,6 @@ public class MainFrame extends JFrame{
 		menu=new MyMenu();
 		menuBar.add(menu.menu);
 		
-		//frame=new Frame();
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(1000,1000);

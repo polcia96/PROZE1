@@ -15,24 +15,24 @@ public abstract class Element {
 	
 	
 	public Element(){
-		x=Stale.X_LEFT;
-		y=Stale.Y_TOP;
-		dimension=new Dimension(Stale.BRICK_WIDTH,Stale.BRICK_HIGHT); 
+		x=Constants.X_LEFT;
+		y=Constants.Y_TOP;
+		dimension=new Dimension(Constants.BRICK_WIDTH,Constants.BRICK_HEIGHT); 
 		//dimension.width=40;
 		//dimension.height=20;
 		
 	}
 	public Element(int xIndex,int yIndex){
-		x=Stale.X_LEFT+xIndex;
-		y=Stale.Y_TOP+yIndex;
-		dimension=new Dimension(Stale.BRICK_WIDTH,Stale.BRICK_HIGHT); 
+		x=Constants.X_LEFT+xIndex;
+		y=Constants.Y_TOP+yIndex;
+		dimension=new Dimension(Constants.BRICK_WIDTH,Constants.BRICK_HEIGHT); 
 		elColor=new Color(0, 0, 0);
 		
 	}
 	
 	public Element(int xIndex,int yIndex, int width,int hight){
-		x=Stale.X_LEFT+xIndex;
-		y=Stale.Y_TOP+yIndex;
+		x=Constants.X_LEFT+xIndex;
+		y=Constants.Y_TOP+yIndex;
 		dimension=new Dimension(width,hight); 
 		elColor=new Color(0, 0, 0);
 		
