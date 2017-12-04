@@ -1,5 +1,8 @@
 package constants;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,7 +10,13 @@ import java.util.Properties;
 
 public final class Constants {
 	
+		//new
+		public static List<String>newBricks_l1;
+		public static List<String>newBricks_l2;
+		public static List<String>newBricks_l3;
+		
 
+		
 		public static int NUMBER_BRICKS;
 		public static int BOARD_WIDTH;
 		public static int BOARD_HEIGHT;
@@ -42,6 +51,21 @@ public final class Constants {
 				InputStream input = null;
 				input = new FileInputStream("constants.properties");
 				constants.load(input);
+				
+				String bricks_l1 = constants.getProperty("level_1");
+				newBricks_l1 = new ArrayList<String>();
+				newBricks_l1 = Arrays.asList(bricks_l1.split(","));
+				
+				String bricks_l2 = constants.getProperty("level_2");
+				newBricks_l2 = new ArrayList<String>();
+				newBricks_l2 = Arrays.asList(bricks_l2.split(","));
+				
+				String bricks_l3 = constants.getProperty("level_3");
+				newBricks_l3 = new ArrayList<String>();
+				newBricks_l3 = Arrays.asList(bricks_l3.split(","));
+				System.out.println(newBricks_l1+ "\n"+ newBricks_l2+"\n"+newBricks_l3 );
+				
+
 				NUMBER_BRICKS = Integer.parseInt(constants.getProperty("NUMBER_BRICKS"));
 				BOARD_WIDTH = Integer.parseInt(constants.getProperty("BOARD_WIDTH"));
 				BOARD_HEIGHT = Integer.parseInt(constants.getProperty("BOARD_HEIGHT"));

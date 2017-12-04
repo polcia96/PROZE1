@@ -21,9 +21,14 @@ public class Brick extends Element {
 	public Brick(int xIndex, int yIndex){
 		super(xIndex, yIndex);
 		elColor=Color.ORANGE;
-		//aa
+
 	}
 	
+	public Brick(int xIndex, int yIndex, Color color){
+		super(xIndex, yIndex);
+		elColor=color;
+
+	}
 	
 	
 	
